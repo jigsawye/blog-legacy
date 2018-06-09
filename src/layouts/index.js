@@ -1,23 +1,21 @@
 import React from 'react';
+import 'prismjs/themes/prism.css';
 
-import '../assets/scss/apollo.scss';
-
+import injectGlobal from '../components/styles/injectGlobal';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 import Head from './Head';
 
-class Template extends React.Component {
-  render() {
-    return (
-      <div className="wrap">
-        <Head />
-        <Header />
-        <section className="container">{this.props.children()}</section>
-        <Footer />
-      </div>
-    );
-  }
-}
+injectGlobal();
+
+const Template = ({ children }) => (
+  <div>
+    <Head />
+    <Header />
+    <section>{children()}</section>
+    <Footer />
+  </div>
+);
 
 export default Template;

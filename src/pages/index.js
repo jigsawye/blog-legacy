@@ -1,14 +1,21 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
+import {
+  PostWrapper,
+  DateWrapper,
+  TitleLink,
+  ArticleContent,
+  ReadMoreLink,
+} from '../components/Post';
+import Container from '../components/common/Container';
 import formatDate from '../utils/formatDate';
 
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <ul className="home post-list">
+    <div>
       <Helmet title={`HOME · ${data.site.siteMetadata.title}`} />
       {posts.map(({ node }) => {
         const { fields, frontmatter, html } = node;
@@ -16,28 +23,19 @@ const HomePage = ({ data }) => {
         const __html = html.split('<!-- more -->')[0];
 
         return (
-          <li className="post-list-item" key={fields.slug}>
-            <article className="post-block">
-              <h2 className="post-title">
-                <Link to={fields.slug} className="post-title-link">
-                  {title}
-                </Link>
-              </h2>
+          <PostWrapper key={fields.slug}>
+            <Container>
+              <DateWrapper>{formatDate(date)}</DateWrapper>
+              <TitleLink to={fields.slug}>{title}</TitleLink>
 
-              <div className="post-info">{formatDate(date)}</div>
+              <ArticleContent dangerouslySetInnerHTML={{ __html }} />
 
-              <div
-                className="post-content"
-                dangerouslySetInnerHTML={{ __html }}
-              />
-              <Link className="read-more" to={fields.slug}>
-                ...更多
-              </Link>
-            </article>
-          </li>
+              <ReadMoreLink to={fields.slug}>READ MORE</ReadMoreLink>
+            </Container>
+          </PostWrapper>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

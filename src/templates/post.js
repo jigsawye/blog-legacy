@@ -1,23 +1,33 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import formatDate from '../utils/formatDate';
+import PostTitleSection from '../components/Post/PostTitleSection';
+import { ArticleContent, Separaotr } from '../components/Post';
+import Container from '../components/common/Container';
+import Disqus from '../components/Disqus';
 
 const PostTemplate = ({ data }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const { frontmatter, html } = data.markdownRemark;
+  const {
+    title: siteTitle,
+    disqusShortname: shortname,
+    siteUrl,
+  } = data.site.siteMetadata;
+  const { frontmatter, fields, html } = data.markdownRemark;
 
   return (
-    <div className="post">
+    <div>
       <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
-      <article className="post-block">
-        <h1 className="post-title">{frontmatter.title}</h1>
-        <div className="post-info">{formatDate(frontmatter.date)}</div>
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </article>
+      <PostTitleSection title={frontmatter.title} date={frontmatter.date} />
+      <Separaotr />
+      <Container>
+        <ArticleContent dangerouslySetInnerHTML={{ __html: html }} />
+      </Container>
+      <Disqus
+        shortname={shortname}
+        siteUrl={siteUrl}
+        slug={fields.slug}
+        title={frontmatter.title}
+      />
     </div>
   );
 };
@@ -30,11 +40,16 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
+        disqusShortname
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

@@ -4,6 +4,7 @@ module.exports = {
     author: 'Evan Ye',
     description: '',
     siteUrl: 'https://jigsawye.com',
+    disqusShortname: 'jigsawnotes',
   },
   plugins: [
     {
@@ -41,18 +42,19 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        // trackingId: 'ADD YOUR TRACKING ID HERE',
+        trackingId: 'UA-57230871-3',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
       },
     },
     'gatsby-plugin-feed',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-next',
   ],

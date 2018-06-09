@@ -14,22 +14,44 @@ Sublime Text 除了有內建的標籤自動補齊，最有名的 pakcage 就是 
 <!-- more -->
 
 ### 安裝
+
 如果你沒有安裝 Emmet，請先進行[安裝](https://github.com/sergeche/emmet-sublime#how-to-install)。
 
 ### 設定
+
 打開 `Sublime Text` -> `Preferences` -> `Key Bindings - User`，增加以下：
+
 ```json
 {
-    "keys": ["tab"], "command": "expand_abbreviation_by_tab", "context": [
-        { "operand": "source.js", "operator": "equal", "match_all": true, "key": "selector" },
-        { "match_all": true, "key": "selection_empty" },
-        { "operator": "equal", "operand": false, "match_all": true, "key": "has_next_field" },
-        { "operand": false, "operator": "equal", "match_all": true, "key": "auto_complete_visible" },
-        { "match_all": true, "key": "is_abbreviation" }
-    ]
+  "keys": ["tab"],
+  "command": "expand_abbreviation_by_tab",
+  "context": [
+    {
+      "operand": "source.js",
+      "operator": "equal",
+      "match_all": true,
+      "key": "selector"
+    },
+    { "match_all": true, "key": "selection_empty" },
+    {
+      "operator": "equal",
+      "operand": false,
+      "match_all": true,
+      "key": "has_next_field"
+    },
+    {
+      "operand": false,
+      "operator": "equal",
+      "match_all": true,
+      "key": "auto_complete_visible"
+    },
+    { "match_all": true, "key": "is_abbreviation" }
+  ]
 }
 ```
-### Demo
-當然，在 JSX 中的 Emmet 也會自動使用 `className` 替代 `class`，`htmlFor` 替代 `for` ⋯⋯等等的 JSX 語法。
 
-{% asset_img demo.gif %}
+### Demo
+
+當然，在 JSX 中的 Emmet 也會自動使用 `className` 替代 `class`，`htmlFor` 替代 `for` ⋯⋯ 等等的 JSX 語法。
+
+![Demo](/static/enable-emmet-for-jsx-in-sublime/demo.gif)

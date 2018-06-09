@@ -1,63 +1,49 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
 
-const NavLink = ({ to, children }) => (
-  <li className="nav-list-item">
-    {to.startsWith('http') ? (
-      <a href={to} className="nav-list-link" target="_blank">
-        {children}
-      </a>
-    ) : (
-      <Link to={to} activeClassName="active" className="nav-list-link" exact>
-        {children}
-      </Link>
-    )}
-  </li>
-);
+import menu from './menu';
 
-const menu = [
-  {
-    title: 'HOME',
-    path: '/',
-  },
-  {
-    title: 'ARCHIVE',
-    path: '/archives',
-  },
-  {
-    title: 'ABOUT',
-    path: '/about',
-  },
-  {
-    title: 'GitHub',
-    path: 'https://github.com/jigsawye',
-    icon: 'fa fa-github',
-  },
-  {
-    title: 'Facebook',
-    path: 'https://facebook.com/jigsaw.ye',
-    icon: 'fa fa-facebook',
-  },
-  {
-    title: 'LinkedIn',
-    path: 'https://www.linkedin.com/in/jigsawye',
-    icon: 'fa fa-linkedin',
-  },
-  {
-    title: 'RSS',
-    path: '/atom.xml',
-    icon: 'fa fa-rss',
-  },
-];
+const NavWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 2px 0 0 auto;
+
+  a {
+    border: 0;
+    font-size: 12px;
+    padding: 10px;
+    color: #999;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    :hover {
+      background: none;
+      color: #000;
+    }
+  }
+`;
+
+const NavLink = ({ to, children }) =>
+  to.startsWith('http') ? (
+    <a href={to} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  ) : (
+    <Link to={to} activeClassName="active" exact>
+      {children}
+    </Link>
+  );
 
 const Nav = () => (
-  <ul className="nav nav-list">
-    {menu.map(({ title, path, icon }) => (
+  <NavWrapper>
+    {menu.map(({ title, path }) => (
       <NavLink to={path} key={title}>
-        {icon ? <i className={icon} alt={title} title={title} /> : title}
+        {title}
       </NavLink>
     ))}
-  </ul>
+  </NavWrapper>
 );
 
 export default Nav;
