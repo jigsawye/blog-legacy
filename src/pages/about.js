@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import ReactMarkdown from 'react-markdown';
 
-import TitleSection from '../components/common/TitleSection';
-import Container from '../components/common/Container';
-import { ArticleContent } from '../components/Post';
+import { TitleSection, Container } from '../components/common';
+import { ArticleContent } from '../components/Article';
 
 const about = `
 
@@ -68,15 +67,17 @@ Other:
 `;
 
 const AboutPage = ({ data }) => (
-  <div>
-    <Helmet title={`ABOUT · ${data.site.siteMetadata.title}`} />
+  <Fragment>
+    <Helmet title={`${data.site.siteMetadata.title} - ABOUT`} />
+
     <TitleSection>About</TitleSection>
+
     <Container>
       <ArticleContent>
         <ReactMarkdown source={about} />
       </ArticleContent>
     </Container>
-  </div>
+  </Fragment>
 );
 
 export default AboutPage;

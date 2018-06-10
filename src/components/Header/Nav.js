@@ -18,6 +18,10 @@ const NavWrapper = styled.div`
     text-decoration: none;
     transition: color 0.2s ease;
 
+    &.active {
+      color: #000;
+    }
+
     :hover {
       background: none;
       color: #000;
@@ -43,6 +47,9 @@ const Nav = () => (
         {title}
       </NavLink>
     ))}
+    <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+      RSS
+    </a>
   </NavWrapper>
 );
 

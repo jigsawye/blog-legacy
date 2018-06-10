@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import injectGlobal from '../components/styles/injectGlobal';
 import Header from '../components/Header';
@@ -8,13 +8,25 @@ import Head from './Head';
 
 injectGlobal();
 
-const Template = ({ children }) => (
-  <div>
-    <Head />
+const Template = ({ children, data }) => (
+  <Fragment>
+    <Head siteMetadata={data.site.siteMetadata} />
     <Header />
-    <section>{children()}</section>
+    {children()}
     <Footer />
-  </div>
+  </Fragment>
 );
 
 export default Template;
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+      }
+    }
+  }
+`;

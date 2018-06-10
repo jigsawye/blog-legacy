@@ -23,8 +23,8 @@ export default [
   //   title: 'LinkedIn',
   //   path: 'https://www.linkedin.com/in/jigsawye',
   // },
-  {
-    title: 'RSS',
-    path: '/atom.xml',
-  },
+  // {
+  //   title: 'RSS',
+  //   path: '/rss.xml',
+  // },
 ];

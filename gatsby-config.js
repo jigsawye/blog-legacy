@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'JIGSAWYE',
     author: 'Evan Ye',
-    description: '',
+    description:
+      '個人筆記及教學空間，包含了 PHP / Laravel、JavaScript / React.js、DevOps 等等⋯⋯，及一些雜七雜八的記錄。',
     siteUrl: 'https://jigsawye.com',
     disqusShortname: 'jigsawnotes',
   },

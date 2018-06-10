@@ -1,13 +1,12 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React, { Fragment } from 'react';
 
 import {
-  PostWrapper,
+  ArticleWrapper,
+  ArticleContent,
   DateWrapper,
   TitleLink,
-  ArticleContent,
   ReadMoreLink,
-} from '../components/Post';
+} from '../components/Article';
 import Container from '../components/common/Container';
 import formatDate from '../utils/formatDate';
 
@@ -15,15 +14,14 @@ const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <div>
-      <Helmet title={`HOME · ${data.site.siteMetadata.title}`} />
+    <Fragment>
       {posts.map(({ node }) => {
         const { fields, frontmatter, html } = node;
         const { title, date } = frontmatter;
         const __html = html.split('<!-- more -->')[0];
 
         return (
-          <PostWrapper key={fields.slug}>
+          <ArticleWrapper key={fields.slug}>
             <Container>
               <DateWrapper>{formatDate(date)}</DateWrapper>
               <TitleLink to={fields.slug}>{title}</TitleLink>
@@ -32,10 +30,10 @@ const HomePage = ({ data }) => {
 
               <ReadMoreLink to={fields.slug}>READ MORE</ReadMoreLink>
             </Container>
-          </PostWrapper>
+          </ArticleWrapper>
         );
       })}
-    </div>
+    </Fragment>
   );
 };
 

@@ -1,8 +1,7 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React, { Fragment } from 'react';
 
-import PostTitleSection from '../components/Post/PostTitleSection';
-import { ArticleContent } from '../components/Post';
+import OpenGraph from '../components/OpenGraph';
+import { ArticleTitleSection, ArticleContent } from '../components/Article';
 import Container from '../components/common/Container';
 import Disqus from '../components/Disqus';
 
@@ -12,12 +11,17 @@ const PostTemplate = ({ data }) => {
     disqusShortname: shortname,
     siteUrl,
   } = data.site.siteMetadata;
-  const { frontmatter, fields, html } = data.markdownRemark;
+  const { frontmatter, fields, html, excerpt } = data.markdownRemark;
 
   return (
-    <div>
-      <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
-      <PostTitleSection title={frontmatter.title} date={frontmatter.date} />
+    <Fragment>
+      <OpenGraph
+        title={`${frontmatter.title} – ${siteTitle}`}
+        description={excerpt}
+        url={`${siteUrl}${fields.slug}`}
+      />
+
+      <ArticleTitleSection title={frontmatter.title} date={frontmatter.date} />
 
       <Container>
         <ArticleContent dangerouslySetInnerHTML={{ __html: html }} />
@@ -29,7 +33,7 @@ const PostTemplate = ({ data }) => {
         slug={fields.slug}
         title={frontmatter.title}
       />
-    </div>
+    </Fragment>
   );
 };
 
@@ -48,6 +52,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt(pruneLength: 140)
       fields {
         slug
       }

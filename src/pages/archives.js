@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 
-import { ArchiveWrapper, TitleLink, DateWrapper } from '../components/Post';
-import TitleSection from '../components/common/TitleSection';
-import Container from '../components/common/Container';
+import { TitleLink, DateWrapper } from '../components/Article';
+import { ArchivesWrapper } from '../components/Archives';
+import { TitleSection, Container } from '../components/common';
 import formatDate from '../utils/formatDate';
 
 const ArchivesPage = ({ data }) => (
-  <div>
+  <Fragment>
     <Helmet title={`ARCHIVES · ${data.site.siteMetadata.title}`} />
     <TitleSection>Archives</TitleSection>
     {data.allMarkdownRemark.edges.map(({ node: { frontmatter, fields } }) => (
-      <ArchiveWrapper key={fields.slug}>
+      <ArchivesWrapper key={fields.slug}>
         <Container key={fields.slug}>
           <DateWrapper>{formatDate(frontmatter.date)}</DateWrapper>
           <TitleLink to={fields.slug}>{frontmatter.title}</TitleLink>
         </Container>
-      </ArchiveWrapper>
+      </ArchivesWrapper>
     ))}
-  </div>
+  </Fragment>
 );
 
 export default ArchivesPage;
