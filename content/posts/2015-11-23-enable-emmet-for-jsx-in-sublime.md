@@ -54,4 +54,4 @@ Sublime Text 除了有內建的標籤自動補齊，最有名的 pakcage 就是 
 
 當然，在 JSX 中的 Emmet 也會自動使用 `className` 替代 `class`，`htmlFor` 替代 `for` ⋯⋯ 等等的 JSX 語法。
 
-![Demo](/static/enable-emmet-for-jsx-in-sublime/demo.gif)
+![Demo](https://i.imgur.com/mgkaOqz.gif)

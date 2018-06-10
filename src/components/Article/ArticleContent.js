@@ -60,12 +60,16 @@ const ArticleContent = styled.div`
     }
   }
 
+  img {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 40px 0px;
+  }
+
   code[class*='language-text'],
   code:not([class*='language-']) {
     color: rgb(189, 16, 224);
-    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-      'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace,
-      serif;
     font-size: 0.9em;
     white-space: pre-wrap;
 

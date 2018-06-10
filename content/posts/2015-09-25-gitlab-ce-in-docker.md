@@ -19,7 +19,6 @@ tags:
 原本在架設的時候想使用 Gitlab + Jenkins，不過因專案的需求沒有需要 Jenkins 這麼開放客製化的 CI 工具（其實是我覺得很囉唆一堆東西要設定），剛好 Gitlab 也有提供 CI，需求上也符合，所以就決定使用 Gitlab + Gitlab CI。
 
 <!-- more -->
-<!-- toc -->
 
 ### Gitlab
 
@@ -29,7 +28,7 @@ tags:
 
 我是直接用了學長架的 OpenStack 叢集開一個 instance 當建置環境，基本上要照這份筆記安裝 Gitlab CE，應該只要隨便一個有裝 Docker 的 unix-like 系統都可以。
 
-{% asset_img 01.png %}
+![Imgur](https://i.imgur.com/sCxpbLf.png)
 
 ###### 安裝
 
@@ -78,7 +77,7 @@ docker run --name gitlab -d \
 
 ###### 完成！
 
-{% asset_img 02.png %}
+![Imgur](https://i.imgur.com/nzIAG0F.png)
 
 打開瀏覽器瀏覽 `http://your-gitlab-ip:10080`，就可以看到 Gitlab 架設好了，輸入預設的帳號密碼就可以直接登入：
 
@@ -95,15 +94,15 @@ docker run --name gitlab -d \
 
 首先在 Gitlab 上建立一個 `ci-flow` 的 repository：
 
-{% asset_img 03.png %}
+![Imgur](https://i.imgur.com/KSkMits.png)
 
 接著點選 CI 選項，點選 **Add project to CI** 將剛剛建立的 `ci-flow` 加入至 CI 中：
 
-{% asset_img 04.png %}
+![Imgur](https://i.imgur.com/wvhHuHd.png)
 
 點選 runner 分頁，記下 url 及 token：
 
-{% asset_img 05.png %}
+![Imgur](https://i.imgur.com/i1kpNnD.png)
 
 ###### gitlab-runner
 
@@ -152,11 +151,11 @@ INFO[0045] Runner registered successfully. Feel free to start it, but if it's ru
 
 現在前往 CI 的 runner 分頁應該就會看到 node-4.1.1 並且是 active 的。
 
-{% asset_img 06.png %}
+![Imgur](https://i.imgur.com/ku19Gss.png)
 
 > 注意，這邊我們要編輯 node-4.1.1 這個 runner，並增加名為 node-4.1.1 的 tag 讓 CI 能夠啟動對應的 runner。
 
-{% asset_img 07.png %}
+![Imgur](https://i.imgur.com/N2dSh45.png)
 
 ###### 建立 project
 
@@ -247,25 +246,25 @@ git push -u origin master
 
 Push 至 Repository 後可以在 CI 的 Dashboard 看見剛剛的 commit 已經 pending 了：
 
-{% asset_img 08.png %}
+![Imgur](https://i.imgur.com/P8qn1rQ.png)
 
 點進去後可以看到目前須執行的所有 job，根據你的 `.gitlab-ci.yml` 而定，一般來說會在多個環境測試，並包含 deploy 等多種不同的 job：
 
-{% asset_img 09.png %}
+![Imgur](https://i.imgur.com/HElBwtE.png)
 
 等待一段時間後就成功就會顯示 Success：
 
-{% asset_img 10.png %}
+![Imgur](https://i.imgur.com/rLqbgsW.png)
 
 你也可以點進 build 中看執行的結果：
 
-{% asset_img 11.png %}
+![Imgur](https://i.imgur.com/h3B39rH.png)
 
 ###### Slack Integration
 
 Gitlab CI 也有提供 Slack 的整合，提供即時的 CI 狀態，只要填入 Webhook 即可：
 
-{% asset_img 12.png %}
+![Imgur](https://i.imgur.com/eh79dAw.png)
 
 ### 總結
 

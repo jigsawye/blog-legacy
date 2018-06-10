@@ -7,7 +7,7 @@ const Head = ({ siteMetadata }) => (
   <Helmet>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={siteMetadata.description} />
-    <title>siteMetadata.title</title>
+    <title>{siteMetadata.title}</title>
     <meta property="og:title" content={siteMetadata.title} />
     <meta property="og:url" content={siteMetadata.siteUrl} />
     <meta property="og:site_name" content={siteMetadata.title} />
