@@ -118,7 +118,8 @@ export const ArticleContent = styled.div`
     }
   }
 
-  code[class*='language-text'] {
+  code[class*='language-text'],
+  code:not([class*='language-']) {
     color: rgb(189, 16, 224);
     font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
       'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace,

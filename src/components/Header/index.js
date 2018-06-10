@@ -8,11 +8,8 @@ const HeaderWrapper = styled.header`
   max-width: 650px;
   margin: auto;
   position: relative;
-
-  @media (min-width: 992px) {
-    display: flex;
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: row;
 `;
 
 const Header = () => (
