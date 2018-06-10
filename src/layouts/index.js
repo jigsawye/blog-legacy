@@ -1,5 +1,4 @@
 import React from 'react';
-import 'prismjs/themes/prism.css';
 
 import injectGlobal from '../components/styles/injectGlobal';
 import Header from '../components/Header';

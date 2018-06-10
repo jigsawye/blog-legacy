@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import formatDate from '../../utils/formatDate';
 
 const Wrapper = styled.aside`
+  width: 100%;
+  padding-bottom: 10px;
   margin-top: 35px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid rgb(234, 234, 234);
 `;
 
 const Title = styled.h1`

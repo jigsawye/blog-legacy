@@ -6,7 +6,6 @@ const CopyrightWrapper = styled.div`
   vertical-align: top;
   justify-content: center;
   padding: 40px 0;
-  width: 900px;
   margin: auto;
 
   p {
@@ -24,12 +23,6 @@ const CopyrightWrapper = styled.div`
     :hover {
       color: #000;
     }
-  }
-
-  @media screen and (max-width: 992px) {
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
   }
 `;
 

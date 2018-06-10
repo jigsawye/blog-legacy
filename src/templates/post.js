@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import PostTitleSection from '../components/Post/PostTitleSection';
-import { ArticleContent, Separaotr } from '../components/Post';
+import { ArticleContent } from '../components/Post';
 import Container from '../components/common/Container';
 import Disqus from '../components/Disqus';
 
@@ -18,10 +18,11 @@ const PostTemplate = ({ data }) => {
     <div>
       <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
       <PostTitleSection title={frontmatter.title} date={frontmatter.date} />
-      <Separaotr />
+
       <Container>
         <ArticleContent dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
+
       <Disqus
         shortname={shortname}
         siteUrl={siteUrl}

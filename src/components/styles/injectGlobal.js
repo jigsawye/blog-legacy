@@ -2,10 +2,10 @@ import { injectGlobal } from 'styled-components';
 
 import normalize from './normalize';
 import custom from './custom';
+import prism from './prism';
 
-// eslint-disable-next-line no-unused-expressions
 export default () => injectGlobal`
   ${normalize};
-
+  ${prism};
   ${custom};
 `;

@@ -32,12 +32,6 @@ export const ArchiveWrapper = styled.div`
   }
 `;
 
-export const Separaotr = styled.div`
-  width: 100%;
-  border-top: 1px solid rgb(234, 234, 234);
-  margin-bottom: 80px;
-`;
-
 export const DateWrapper = styled.div`
   margin-top: 0px;
   color: rgb(153, 153, 153);

@@ -16,11 +16,6 @@ const Head = () => (
     />
     <link rel="icon" href={LogoImage} />
     <link
-      rel="stylesheet"
-      href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600"
-      type="text/css"
-    />
-    <link
       rel="search"
       type="application/opensearchdescription+xml"
       href="/atom.xml"
