@@ -1,8 +1,16 @@
 import { css } from 'styled-components';
 
 export default css`
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
   body {
-    font-family: Arial, sans-serif, 'Helvetica Neue', 'PingFeng TC', '微軟正黑體'
+    font-family: 'SF Pro TC', 'SF Pro Text', 'PingFang TC', 'Helvetica Neue',
+      'Helvetica', 'Arial', 'Microsoft JhengHei', wf_SegoeUI, 'Segoe UI', Segoe,
+      'Segoe WP', Tahoma, Verdana, Ubuntu, 'Bitstream Vera Sans', 'DejaVu Sans',
+      Tahoma, 微軟正黑體, 'LiHei Pro', 'WenQuanYi Micro Hei',
+      'Droid Sans Fallback', 'AR PL UMing TW', Roboto, 'Helvetica Neue',
+      'Hiragino Maru Gothic ProN', メイリオ, 'ヒラギノ丸ゴ ProN W4', Meiryo,
+      'Droid Sans', sans-serif;
     text-rendering: optimizeLegibility;
   }
 
@@ -11,7 +19,9 @@ export default css`
     color: #000;
   }
 
-  code, pre {
-    font-family: Monaco, courier, monospace, 'Roboto Mono';
+  code,
+  pre {
+    font-family: Menlo, Monaco, Consolas, 'Courier New', 'Roboto Mono',
+      monospace;
   }
 `;

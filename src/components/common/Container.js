@@ -6,11 +6,11 @@ export default styled.article`
 
   @media (max-width: 730px) {
     max-width: 100%;
-    padding: 0px 20px 50px;
+    padding: 0px 10px;
   }
 
   @media (max-width: 950px) {
     max-width: 100%;
-    padding: 0px 30px 50px;
+    padding: 0px 20px;
   }
 `;

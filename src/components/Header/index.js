@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Container } from '../common';
+
 import Logo from './Logo';
 import Nav from './Nav';
 
-const HeaderWrapper = styled.header`
-  max-width: 650px;
+const HeaderWrapper = styled(Container)`
   margin: auto;
   position: relative;
   display: flex;
