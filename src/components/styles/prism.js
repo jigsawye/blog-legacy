@@ -59,7 +59,6 @@ export default css`
     hyphens: none;
   }
 
-  ,
   .gatsby-highlight + .gatsby-highlight {
     margintop: 20;
   }
@@ -92,7 +91,6 @@ export default css`
     color: ${prismColors.primitive};
   }
 
-  ,
   .token.boolean {
     color: ${prismColors.boolean};
   }
@@ -127,7 +125,6 @@ export default css`
     color: ${prismColors.variable};
   }
 
-  ,
   .token.attr-value {
     color: ${prismColors.string};
   }
@@ -141,7 +138,6 @@ export default css`
     color: ${prismColors.className};
   }
 
-  ,
   .token.important {
     fontweight: 400;
   }
@@ -149,6 +145,7 @@ export default css`
   .token.bold {
     fontweight: 700;
   }
+
   .token.italic {
     fontstyle: italic;
   }
