@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{100:function(t,a){t.exports={data:{site:{siteMetadata:{title:"JIGSAWYE",description:"個人筆記及教學空間，包含了 PHP / Laravel、JavaScript / React.js、DevOps 等等⋯⋯，及一些雜七雜八的記錄。",siteUrl:"https://jigsawye.com"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----d960a0fdb0a2be33ebb2.js.map
