@@ -25,21 +25,24 @@ System Developer@Yoctol
 
 Front-end:
 
+- React
+  - next
+  - react-apollo
+  - styled-components
 - HTML5
-- CSS / SASS, PostCSS
-- JavaScript, ECMAScript 6/7/8
-- Webpack, Babel
-- React & React's ecosystem
-- Vue & Vue's ecosystem
-- Angular @1.x
-- Bootstrap, Bulma
+- CSS, SASS, PostCSS
+- JavaScript, ECMAScript
+- Webpack, Babel, Next.js
 
 Backend:
 
+- Node.js
+  - GraphQL
+  - apollo-server
+  - Koa
 - PHP, Laravel
-- Node.js, Koa, Express
 - WebSocket
-- MariaDB / MySQL, SQLite
+- MySQL, PostgreSQL, SQLite
 - Redis
 
 Other:

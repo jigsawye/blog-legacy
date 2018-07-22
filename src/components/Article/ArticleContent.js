@@ -24,6 +24,7 @@ const ArticleContent = styled.div`
   h6 {
     font-weight: bold;
     font-size: 18px;
+    margin-top: 40px;
   }
 
   strong {
