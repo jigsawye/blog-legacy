@@ -24,7 +24,7 @@ date: 2018-07-22 14:00:00
 
 ## Step 1：初始化 project
 
-在此步驟中，我們會透過你的 terminal（e.g. Terminal, iTerm, PowerShell）建立名為 `graphql-server-example` 的資料節，並建立簡單的 Node.js  程式。本步只是為了後續的操作作準備，將會在  terminal 及 editor 來回作切換
+在此步驟中，我們會透過你的 terminal（e.g. Terminal, iTerm, PowerShell）建立名為 `graphql-server-example` 的資料夾，並建立簡單的 Node.js  程式。本步只是為了後續的操作作準備，將會在  terminal 及 editor 來回作切換
 
 首先，使用 mkdir 指令建立一個名為 graphql-server-example 的資料夾。
 
