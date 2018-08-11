@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Container from '../components/common/Container';
+import Layout from '../components/layout';
 import formatDate from '../utils/formatDate';
 import {
   ArticleContent,
@@ -11,10 +13,13 @@ import {
 } from '../components/Article';
 
 const HomePage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const {
+    allMarkdownRemark: { edges: posts },
+    site,
+  } = data;
 
   return (
-    <Fragment>
+    <Layout site={site}>
       {posts.map(({ node }) => {
         const { fields, frontmatter, html } = node;
         const { title, date } = frontmatter;
@@ -33,7 +38,7 @@ const HomePage = ({ data }) => {
           </ArticleWrapper>
         );
       })}
-    </Fragment>
+    </Layout>
   );
 };
 
@@ -44,8 +49,11 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
+
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {

@@ -11,10 +11,10 @@ export default [
     title: 'ABOUT',
     path: '/about',
   },
-  // {
-  //   title: 'GitHub',
-  //   path: 'https://github.com/jigsawye',
-  // },
+  {
+    title: 'GitHub',
+    path: 'https://github.com/jigsawye',
+  },
   // {
   //   title: 'Facebook',
   //   path: 'https://facebook.com/jigsaw.ye',

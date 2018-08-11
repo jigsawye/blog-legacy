@@ -1,8 +1,8 @@
-import Link from 'gatsby-link';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-import LogoImage from '../../assets/favicon.png';
+import LogoImage from '../../../assets/favicon.png';
 
 const LogoWrapper = styled.aside`
   padding: 30px 0;

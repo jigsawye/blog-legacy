@@ -2,8 +2,8 @@ const path = require('path');
 
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.createPages = async ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   const PostTemplate = path.resolve('./src/templates/post.js');
 
@@ -44,8 +44,8 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
 
 const POST_FILENAME_REGEX = /([0-9]+)-([0-9]+)-([0-9]+)-(.+)/;
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
     const filePath = createFilePath({ node, getNode });
