@@ -33,8 +33,6 @@ const Date = styled.div`
 export default ({ title, date }) => (
   <Wrapper>
     <Title>{title}</Title>
-    {console.log(date)}
-    {console.log('test')}
     <Date>{formatDate(date)}</Date>
   </Wrapper>
 );
