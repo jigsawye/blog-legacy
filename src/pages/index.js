@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 
-import {
-  ArticleWrapper,
-  ArticleContent,
-  DateWrapper,
-  TitleLink,
-  ReadMoreLink,
-} from '../components/Article';
 import Container from '../components/common/Container';
 import formatDate from '../utils/formatDate';
+import {
+  ArticleContent,
+  ArticleWrapper,
+  DateWrapper,
+  ReadMoreLink,
+  TitleLink,
+} from '../components/Article';
 
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;

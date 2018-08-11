@@ -1,7 +1,7 @@
 import { injectGlobal } from 'styled-components';
 
-import normalize from './normalize';
 import custom from './custom';
+import normalize from './normalize';
 import prism from './prism';
 
 export default () => injectGlobal`

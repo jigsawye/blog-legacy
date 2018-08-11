@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
+import React, { Fragment } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import { TitleSection, Container } from '../components/common';
 import { ArticleContent } from '../components/Article';
+import { Container, TitleSection } from '../components/common';
 
 const about = `
 

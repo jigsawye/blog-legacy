@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-import OpenGraph from '../components/OpenGraph';
-import { ArticleTitleSection, ArticleContent } from '../components/Article';
 import Container from '../components/common/Container';
 import Disqus from '../components/Disqus';
+import OpenGraph from '../components/OpenGraph';
+import { ArticleContent, ArticleTitleSection } from '../components/Article';
 
 const PostTemplate = ({ data }) => {
   const {

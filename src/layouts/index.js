@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 
-import injectGlobal from '../components/styles/injectGlobal';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
+import injectGlobal from '../components/styles/injectGlobal';
 
 import Head from './Head';
 

@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
+import React, { Fragment } from 'react';
 
-import { TitleLink, DateWrapper } from '../components/Article';
-import { ArchivesWrapper } from '../components/Archives';
-import { TitleSection, Container } from '../components/common';
 import formatDate from '../utils/formatDate';
+import { ArchivesWrapper } from '../components/Archives';
+import { Container, TitleSection } from '../components/common';
+import { DateWrapper, TitleLink } from '../components/Article';
 
 const ArchivesPage = ({ data }) => (
   <Fragment>
