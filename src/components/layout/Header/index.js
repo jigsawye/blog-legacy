@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Container } from '../common';
+import { Container } from '../../common';
 
 import Logo from './Logo';
 import Nav from './Nav';

@@ -1,7 +1,7 @@
 import Helmet from 'react-helmet';
 import React from 'react';
 
-import LogoImage from '../assets/favicon.png';
+import LogoImage from '../../assets/favicon.png';
 
 const Head = ({ siteMetadata }) => (
   <Helmet>

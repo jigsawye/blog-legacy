@@ -1,16 +1,23 @@
 import Helmet from 'react-helmet';
-import React, { Fragment } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
 
+import Layout from '../components/layout';
 import formatDate from '../utils/formatDate';
 import { ArchivesWrapper } from '../components/Archives';
 import { Container, TitleSection } from '../components/common';
 import { DateWrapper, TitleLink } from '../components/Article';
 
-const ArchivesPage = ({ data }) => (
-  <Fragment>
-    <Helmet title={`ARCHIVES · ${data.site.siteMetadata.title}`} />
+const ArchivesPage = ({
+  data: {
+    site,
+    allMarkdownRemark: { edges: posts },
+  },
+}) => (
+  <Layout site={site}>
+    <Helmet title={`ARCHIVES · ${site.siteMetadata.title}`} />
     <TitleSection>Archives</TitleSection>
-    {data.allMarkdownRemark.edges.map(({ node: { frontmatter, fields } }) => (
+    {posts.map(({ node: { frontmatter, fields } }) => (
       <ArchivesWrapper key={fields.slug}>
         <Container key={fields.slug}>
           <DateWrapper>{formatDate(frontmatter.date)}</DateWrapper>
@@ -18,7 +25,7 @@ const ArchivesPage = ({ data }) => (
         </Container>
       </ArchivesWrapper>
     ))}
-  </Fragment>
+  </Layout>
 );
 
 export default ArchivesPage;
@@ -28,6 +35,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

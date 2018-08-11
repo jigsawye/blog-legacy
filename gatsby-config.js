@@ -38,10 +38,8 @@ module.exports = {
         respectDNT: true,
       },
     },
-    'gatsby-plugin-feed',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-next',
   ],
 };

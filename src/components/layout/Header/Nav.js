@@ -1,6 +1,6 @@
-import Link from 'gatsby-link';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import menu from './menu';
 
@@ -47,9 +47,6 @@ const Nav = () => (
         {title}
       </NavLink>
     ))}
-    <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-      RSS
-    </a>
   </NavWrapper>
 );
 

@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Container from '../components/common/Container';
 import Disqus from '../components/Disqus';
+import Layout from '../components/layout';
 import OpenGraph from '../components/OpenGraph';
 import { ArticleContent, ArticleTitleSection } from '../components/Article';
 
@@ -14,7 +16,7 @@ const PostTemplate = ({ data }) => {
   const { frontmatter, fields, html, excerpt } = data.markdownRemark;
 
   return (
-    <Fragment>
+    <Layout site={data.site}>
       <OpenGraph
         title={`${frontmatter.title} – ${siteTitle}`}
         description={excerpt}
@@ -33,7 +35,7 @@ const PostTemplate = ({ data }) => {
         slug={fields.slug}
         title={frontmatter.title}
       />
-    </Fragment>
+    </Layout>
   );
 };
 

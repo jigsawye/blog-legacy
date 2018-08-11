@@ -1,7 +1,9 @@
 import Helmet from 'react-helmet';
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import { graphql } from 'gatsby';
 
+import Layout from '../components/layout';
 import { ArticleContent } from '../components/Article';
 import { Container, TitleSection } from '../components/common';
 
@@ -69,9 +71,9 @@ Other:
 - [@LinkedIn](https://www.linkedin.com/in/jigsawye)
 `;
 
-const AboutPage = ({ data }) => (
-  <Fragment>
-    <Helmet title={`${data.site.siteMetadata.title} - ABOUT`} />
+const AboutPage = ({ data: { site } }) => (
+  <Layout site={site}>
+    <Helmet title={`${site.siteMetadata.title} - ABOUT`} />
 
     <TitleSection>About</TitleSection>
 
@@ -80,7 +82,7 @@ const AboutPage = ({ data }) => (
         <ReactMarkdown source={about} />
       </ArticleContent>
     </Container>
-  </Fragment>
+  </Layout>
 );
 
 export default AboutPage;
@@ -90,6 +92,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
   }
