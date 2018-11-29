@@ -8,6 +8,8 @@ const githubColors = {
   black: '#24292e',
   darkBlue: '#032f62',
   gray: '#6a737d',
+  greenLight: '#e6ffed',
+  redLight: '#ffdce0',
 };
 
 const prismColors = {
@@ -60,11 +62,11 @@ export default css`
   }
 
   .gatsby-highlight + .gatsby-highlight {
-    margintop: 20;
+    margin-top: 20;
   }
 
   .gatsby-highlight-code-line {
-    backgroundcolor: ${prismColors.lineHighlight};
+    background-color: ${prismColors.lineHighlight};
     display: block;
     margin: -0.125rem calc(-1rem - 15px);
     padding: 0.125rem calc(1rem + 15px);
@@ -86,9 +88,12 @@ export default css`
   .token.number,
   .token.function-name,
   .token.constant,
-  .token.symbol,
-  .token.deleted {
+  .token.symbol {
     color: ${prismColors.primitive};
+  }
+
+  .token.deleted {
+    background-color: ${githubColors.redLight};
   }
 
   .token.boolean {
@@ -109,9 +114,12 @@ export default css`
 
   .token.selector,
   .token.char,
-  .token.builtin,
-  .token.inserted {
+  .token.builtin {
     color: ${prismColors.char};
+  }
+
+  .token.inserted {
+    background-color: ${githubColors.greenLight};
   }
 
   .token.function {
@@ -139,15 +147,15 @@ export default css`
   }
 
   .token.important {
-    fontweight: 400;
+    font-weight: 400;
   }
 
   .token.bold {
-    fontweight: 700;
+    font-weight: 700;
   }
 
   .token.italic {
-    fontstyle: italic;
+    font-style: italic;
   }
 
   .token.entity {

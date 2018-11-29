@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
 
-import injectGlobal from '../styles/injectGlobal';
+import GlobalStyle from '../styles/GlobalStyle';
 
 import Footer from './Footer';
 import Head from './Head';
 import Header from './Header';
 
-injectGlobal();
-
 const Template = ({ children, site }) => (
   <Fragment>
+    <GlobalStyle />
     <Head siteMetadata={site.siteMetadata} />
     <Header />
     {children}
