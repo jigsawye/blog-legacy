@@ -90,6 +90,8 @@ const Demo = React.memo(({ children }) => <div>{children}</div>);
 - `shouldComponentUpdate`: 若 return `true` 就進行 re-render，否則不會 re-render。
 - `areEqual`: 若 return `true` 代表 `props` 相同，不進行 re-render，否則皆會 re-render。
 
+詳細的說明可以到 [官方文件 的 React.memo 章節](https://reactjs.org/docs/react-api.html#reactmemo) 查閱。
+
 ```js
 const Demo = React.memo(
   ({ children }) => <div>{children}</div>,
@@ -103,3 +105,7 @@ const Demo = React.memo(
     return false;
   });
 ```
+
+## References
+
+- [React Docs](https://reactjs.org/docs/react-api.html#reactmemo)
