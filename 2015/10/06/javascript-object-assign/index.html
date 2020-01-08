@@ -1,8 +1,14 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.57"/><style type="text/css">
-    .anchor {
-      float: left;
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.18.18"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -40,10 +46,10 @@
         }
       }
     })
-  </script><script>
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
   
   function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-57230871-3',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
-  if(!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -52,8 +58,11 @@
   if (typeof ga === "function") {
     ga('create', 'UA-57230871-3', 'auto', {});
       ga('set', 'anonymizeIp', true);
-      }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">JavaScript 的 Object.assign 陷阱 – JIGSAWYE</title><link data-react-helmet="true" rel="icon" href="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png"/><link data-react-helmet="true" rel="search" type="application/opensearchdescription+xml" href="/rss.xml" title="JIGSAWYE"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:site_name" content="JIGSAWYE"/><meta data-react-helmet="true" property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="description"/><meta data-react-helmet="true" property="og:url" content="https://jigsawye.com/2015/10/06/javascript-object-assign/"/><meta data-react-helmet="true" property="og:title" content="JavaScript 的 Object.assign 陷阱 – JIGSAWYE"/><meta data-react-helmet="true" property="og:description"/><meta data-react-helmet="true" name="twitter:title" content="JavaScript 的 Object.assign 陷阱 – JIGSAWYE"/><meta data-react-helmet="true" name="twitter:description"/><style data-styled="knehJx jCMNrH cWPdMk cLxNOS glQwke hMCDVY gYqYBm PqukP bgJglY vEyL nQyQM eKhoER" data-styled-version="4.1.2">
+      
+      
+      
+      
+      }</script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">JavaScript 的 Object.assign 陷阱 – JIGSAWYE</title><link data-react-helmet="true" rel="icon" href="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png"/><link data-react-helmet="true" rel="search" type="application/opensearchdescription+xml" href="/rss.xml" title="JIGSAWYE"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:site_name" content="JIGSAWYE"/><meta data-react-helmet="true" property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="description"/><meta data-react-helmet="true" property="og:url" content="https://jigsawye.com/2015/10/06/javascript-object-assign/"/><meta data-react-helmet="true" property="og:title" content="JavaScript 的 Object.assign 陷阱 – JIGSAWYE"/><meta data-react-helmet="true" property="og:description"/><meta data-react-helmet="true" name="twitter:title" content="JavaScript 的 Object.assign 陷阱 – JIGSAWYE"/><meta data-react-helmet="true" name="twitter:description"/><style data-styled="knehJx jCMNrH cWPdMk cLxNOS glQwke hMCDVY gYqYBm PqukP bgJglY vEyL nQyQM eKhoER" data-styled-version="4.4.1">
 /* sc-component-id: Container-ig9vs6-0 */
 .PqukP{max-width:650px;margin:auto;} @media (max-width:730px){.PqukP{max-width:100%;padding:0px 10px;}} @media (max-width:950px){.PqukP{max-width:100%;padding:0px 20px;}}
 /* sc-component-id: Disqus__CommentWrapper-sc-1rk6p9u-0 */
@@ -79,17 +88,17 @@
 /* sc-component-id: ArticleTitleSection__Date-sc-8eqskn-2 */
 .gYqYBm{color:rgb(153,153,153);font-size:12px;text-align:center;margin:20px 0px 40px;}
 /* sc-component-id: ArticleContent-sc-1ah6ipv-0 */
-.bgJglY{font-weight:400;font-size:14px;line-height:24px;margin:30px 0 15px;} .bgJglY p{margin-bottom:20px;} .bgJglY a{color:rgb(6,125,247);font-size:inherit;-webkit-text-decoration:none;text-decoration:none;} .bgJglY h1,.bgJglY h2,.bgJglY h3,.bgJglY h4,.bgJglY h5,.bgJglY h6{font-weight:bold;font-size:18px;margin-top:40px;} .bgJglY strong{font-weight:600;} .bgJglY blockquote{border-left:5px solid;margin:0;padding-left:10px;} .bgJglY ul{list-style-type:none;margin-left:15px;padding:0px;} .bgJglY ul li{font-size:14px;line-height:24px;margin-bottom:10px;} .bgJglY ul li ul{margin-top:10px;} .bgJglY ul li:before{content:'-';display:inline-block;color:rgb(153,153,153);position:absolute;margin-left:-15px;} .bgJglY img{width:100%;display:block;text-align:center;margin:40px 0px;} .bgJglY code[class*='language-text'],.bgJglY code:not([class*='language-']){color:rgb(189,16,224);font-size:0.9em;white-space:pre-wrap;} .bgJglY code[class*='language-text']:before,.bgJglY code:not([class*='language-']):before{content:'`';} .bgJglY code[class*='language-text']:after,.bgJglY code:not([class*='language-']):after{content:'`';}</style><link as="script" rel="preload" href="/0-a6b522f5d7dcea0104c0.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-8f348615751944ce14e4.js"/><link as="script" rel="preload" href="/app-c678515425848519d7ee.js"/><link as="script" rel="preload" href="/webpack-runtime-3ce535e876d6c5e6360b.js"/><link rel="preload" href="/static/d/708/path---2015-10-06-javascript-object-assign-71-f-158-0Y7R3gYIomyrYSVs0S0vyUBm9Y.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><article class="Container-ig9vs6-0 Header__HeaderWrapper-sc-1wabp0g-0 knehJx"><aside class="Logo__LogoWrapper-sc-1dmboy-0 jCMNrH"><a class="Logo__LogoLink-sc-1dmboy-1 cWPdMk" href="/"><img src="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png" height="28px" width="28px" alt="Logo"/></a></aside><div class="Nav__NavWrapper-h8swmt-0 cLxNOS"><a href="/">HOME</a><a href="/archives">ARCHIVE</a><a href="/about">ABOUT</a><a href="https://github.com/jigsawye" target="_blank" rel="noopener noreferrer">GitHub</a></div></article><aside class="ArticleTitleSection__Wrapper-sc-8eqskn-0 glQwke"><h1 class="ArticleTitleSection__Title-sc-8eqskn-1 hMCDVY">JavaScript 的 Object.assign 陷阱</h1><div class="ArticleTitleSection__Date-sc-8eqskn-2 gYqYBm">2015 年 10 月 6 日（3 年前）</div></aside><article class="Container-ig9vs6-0 PqukP"><div class="ArticleContent-sc-1ah6ipv-0 bgJglY"><blockquote>
+.bgJglY{font-weight:400;font-size:14px;line-height:24px;margin:30px 0 15px;} .bgJglY p{margin-bottom:20px;} .bgJglY a{color:rgb(6,125,247);font-size:inherit;-webkit-text-decoration:none;text-decoration:none;} .bgJglY h1,.bgJglY h2,.bgJglY h3,.bgJglY h4,.bgJglY h5,.bgJglY h6{font-weight:bold;font-size:18px;margin-top:40px;} .bgJglY strong{font-weight:600;} .bgJglY blockquote{border-left:5px solid;margin:0;padding-left:10px;} .bgJglY ul{list-style-type:none;margin-left:15px;padding:0px;} .bgJglY ul li{font-size:14px;line-height:24px;margin-bottom:10px;} .bgJglY ul li ul{margin-top:10px;} .bgJglY ul li:before{content:'-';display:inline-block;color:rgb(153,153,153);position:absolute;margin-left:-15px;} .bgJglY img{width:100%;display:block;text-align:center;margin:40px 0px;} .bgJglY code[class*='language-text'],.bgJglY code:not([class*='language-']){color:rgb(189,16,224);font-size:0.9em;white-space:pre-wrap;} .bgJglY code[class*='language-text']:before,.bgJglY code:not([class*='language-']):before{content:'`';} .bgJglY code[class*='language-text']:after,.bgJglY code:not([class*='language-']):after{content:'`';}</style><link as="script" rel="preload" href="/webpack-runtime-28b14576f600eab2acba.js"/><link as="script" rel="preload" href="/app-4d9f2b5c80db689321c9.js"/><link as="script" rel="preload" href="/commons-6b3a5b1ffd6585b49e3c.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-44847d6cbbae1fbb547a.js"/><link as="fetch" rel="preload" href="/page-data/2015/10/06/javascript-object-assign/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><article class="Container-ig9vs6-0 Header__HeaderWrapper-sc-1wabp0g-0 knehJx"><aside class="Logo__LogoWrapper-sc-1dmboy-0 jCMNrH"><a class="Logo__LogoLink-sc-1dmboy-1 cWPdMk" href="/"><img src="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png" height="28px" width="28px" alt="Logo"/></a></aside><div class="Nav__NavWrapper-h8swmt-0 cLxNOS"><a href="/">HOME</a><a href="/archives">ARCHIVE</a><a href="/about">ABOUT</a><a href="https://github.com/jigsawye" target="_blank" rel="noopener noreferrer">GitHub</a></div></article><aside class="ArticleTitleSection__Wrapper-sc-8eqskn-0 glQwke"><h1 class="ArticleTitleSection__Title-sc-8eqskn-1 hMCDVY">JavaScript 的 Object.assign 陷阱</h1><div class="ArticleTitleSection__Date-sc-8eqskn-2 gYqYBm">2015 年 10 月 6 日（4 年前）</div></aside><article class="Container-ig9vs6-0 PqukP"><div class="ArticleContent-sc-1ah6ipv-0 bgJglY"><blockquote>
 <p>以下開發情境為 ES2015（ES6）</p>
 </blockquote>
 <p>一般在寫 React 的時候，通常會希望資料是 immutable（不可變的），讓開發時對資料的流向即處理更容易，所以通常會使用 <code class="language-text">Object.assign</code> 來複制 object。但今天在寫時遇到一個問題，我一直以為 <code class="language-text">Object.assign</code> 會連同子項目都複製，結果兩個不同的資料改 A 竟然連 B 都跟著動，就做個紀錄。</p>
 <!-- more -->
 <p>假設我們有個 object，接著透過 <code class="language-text">Object.assign</code> 複製兩個 object：</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> test <span class="token operator">=</span> <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
@@ -100,19 +109,19 @@
 
 <span class="token comment">// cloneA</span>
 <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'change value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'change value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// cloneB</span>
 <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>可是當改變 <code class="language-text">childrenObject</code> 的值時，卻會連動改變：</p>
@@ -120,19 +129,19 @@
 
 <span class="token comment">// cloneA</span>
 <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'change value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'change value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'change value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'change value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// cloneB</span>
 <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'change value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'change value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>原因是 <code class="language-text">Object.assign</code> 只會對 object 的子項目做 clone，下一層的則會建立 reference，所以指向的 <code class="language-text">childrenObject</code> 會是同一個。
@@ -140,14 +149,14 @@
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> cloneDeep <span class="token operator">=</span> <span class="token keyword">from</span> <span class="token string">'lodash.clonedeep'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> test <span class="token operator">=</span> <span class="token punctuation">{</span>
-  childrenKey<span class="token punctuation">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
-  childrenObject<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    keyA<span class="token punctuation">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
-    keyB<span class="token punctuation">:</span> <span class="token string">'value b'</span>
+  childrenKey<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+  childrenObject<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keyA<span class="token operator">:</span> <span class="token string">'value a'</span><span class="token punctuation">,</span>
+    keyB<span class="token operator">:</span> <span class="token string">'value b'</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">const</span> cloneA <span class="token operator">=</span> <span class="token function">cloneDeep</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> cloneB <span class="token operator">=</span> <span class="token function">cloneDeep</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>或是使用 <a href="https://facebook.github.io/immutable-js/">immutable.js</a>。</p>
-<p>reference: <a href="http://boke.io/immutable-js/">搞定immutable.js</a></p></div></article><article class="Container-ig9vs6-0 PqukP"><div class="Disqus__CommentWrapper-sc-1rk6p9u-0 vEyL"><div id="disqus_thread"></div></div></article><footer class="Footer__FooterWrapper-w8tijy-0 nQyQM"><div class="Copyright__CopyrightWrapper-sc-14thj82-0 eKhoER"><p>Copyright © <!-- -->2018<!-- --> <a href="https://jigsawye.com">Evan Ye</a>, powered by<!-- --> <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby</a>. All rights reserved.</p></div></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-js","jsonName":"2015-10-06-javascript-object-assign-71f","path":"/2015/10/06/javascript-object-assign/"};window.dataPath="708/path---2015-10-06-javascript-object-assign-71-f-158-0Y7R3gYIomyrYSVs0S0vyUBm9Y";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c678515425848519d7ee.js"],"component---src-templates-post-js":["/component---src-templates-post-js-8f348615751944ce14e4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-50a7ea7dbe557b8aa067.js"],"component---src-pages-about-js":["/component---src-pages-about-js-1119b792a38b3d0a29af.js"],"component---src-pages-archives-js":["/component---src-pages-archives-js-8187d7469b097d431957.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e62248ff4f7d8e258eff.js"]};/*]]>*/</script><script src="/webpack-runtime-3ce535e876d6c5e6360b.js" async=""></script><script src="/app-c678515425848519d7ee.js" async=""></script><script src="/component---src-templates-post-js-8f348615751944ce14e4.js" async=""></script><script src="/0-a6b522f5d7dcea0104c0.js" async=""></script></body></html>
+<p>reference: <a href="http://boke.io/immutable-js/">搞定immutable.js</a></p></div></article><article class="Container-ig9vs6-0 PqukP"><div class="Disqus__CommentWrapper-sc-1rk6p9u-0 vEyL"><div id="disqus_thread"></div></div></article><footer class="Footer__FooterWrapper-w8tijy-0 nQyQM"><div class="Copyright__CopyrightWrapper-sc-14thj82-0 eKhoER"><p>Copyright © <!-- -->2020<!-- --> <a href="https://jigsawye.com">Evan Ye</a>, powered by<!-- --> <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby</a>. All rights reserved.</p></div></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2015/10/06/javascript-object-assign/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4d9f2b5c80db689321c9.js"],"component---src-templates-post-js":["/component---src-templates-post-js-44847d6cbbae1fbb547a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4ee2ede8c5c83a21afd8.js"],"component---src-pages-about-js":["/component---src-pages-about-js-c657d5223ebe8b35985f.js"],"component---src-pages-archives-js":["/component---src-pages-archives-js-77e23627ee71520ab576.js"],"component---src-pages-index-js":["/component---src-pages-index-js-5fb838da1101b783fdde.js"]};/*]]>*/</script><script src="/component---src-templates-post-js-44847d6cbbae1fbb547a.js" async=""></script><script src="/commons-6b3a5b1ffd6585b49e3c.js" async=""></script><script src="/app-4d9f2b5c80db689321c9.js" async=""></script><script src="/webpack-runtime-28b14576f600eab2acba.js" async=""></script></body></html>

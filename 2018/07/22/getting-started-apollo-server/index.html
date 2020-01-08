@@ -1,8 +1,14 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.57"/><style type="text/css">
-    .anchor {
-      float: left;
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.18.18"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -40,10 +46,10 @@
         }
       }
     })
-  </script><script>
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
   
   function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-57230871-3',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
-  if(!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
+  if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -52,8 +58,11 @@
   if (typeof ga === "function") {
     ga('create', 'UA-57230871-3', 'auto', {});
       ga('set', 'anonymizeIp', true);
-      }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE</title><link data-react-helmet="true" rel="icon" href="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png"/><link data-react-helmet="true" rel="search" type="application/opensearchdescription+xml" href="/rss.xml" title="JIGSAWYE"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:site_name" content="JIGSAWYE"/><meta data-react-helmet="true" property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="description"/><meta data-react-helmet="true" property="og:url" content="https://jigsawye.com/2018/07/22/getting-started-apollo-server/"/><meta data-react-helmet="true" property="og:title" content="透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE"/><meta data-react-helmet="true" property="og:description"/><meta data-react-helmet="true" name="twitter:title" content="透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE"/><meta data-react-helmet="true" name="twitter:description"/><style data-styled="knehJx jCMNrH cWPdMk cLxNOS glQwke hMCDVY gYqYBm PqukP bgJglY vEyL nQyQM eKhoER" data-styled-version="4.1.2">
+      
+      
+      
+      
+      }</script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE</title><link data-react-helmet="true" rel="icon" href="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png"/><link data-react-helmet="true" rel="search" type="application/opensearchdescription+xml" href="/rss.xml" title="JIGSAWYE"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/><meta data-react-helmet="true" property="og:site_name" content="JIGSAWYE"/><meta data-react-helmet="true" property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="description"/><meta data-react-helmet="true" property="og:url" content="https://jigsawye.com/2018/07/22/getting-started-apollo-server/"/><meta data-react-helmet="true" property="og:title" content="透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE"/><meta data-react-helmet="true" property="og:description"/><meta data-react-helmet="true" name="twitter:title" content="透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server – JIGSAWYE"/><meta data-react-helmet="true" name="twitter:description"/><style data-styled="knehJx jCMNrH cWPdMk cLxNOS glQwke hMCDVY gYqYBm PqukP bgJglY vEyL nQyQM eKhoER" data-styled-version="4.4.1">
 /* sc-component-id: Container-ig9vs6-0 */
 .PqukP{max-width:650px;margin:auto;} @media (max-width:730px){.PqukP{max-width:100%;padding:0px 10px;}} @media (max-width:950px){.PqukP{max-width:100%;padding:0px 20px;}}
 /* sc-component-id: Disqus__CommentWrapper-sc-1rk6p9u-0 */
@@ -79,7 +88,7 @@
 /* sc-component-id: ArticleTitleSection__Date-sc-8eqskn-2 */
 .gYqYBm{color:rgb(153,153,153);font-size:12px;text-align:center;margin:20px 0px 40px;}
 /* sc-component-id: ArticleContent-sc-1ah6ipv-0 */
-.bgJglY{font-weight:400;font-size:14px;line-height:24px;margin:30px 0 15px;} .bgJglY p{margin-bottom:20px;} .bgJglY a{color:rgb(6,125,247);font-size:inherit;-webkit-text-decoration:none;text-decoration:none;} .bgJglY h1,.bgJglY h2,.bgJglY h3,.bgJglY h4,.bgJglY h5,.bgJglY h6{font-weight:bold;font-size:18px;margin-top:40px;} .bgJglY strong{font-weight:600;} .bgJglY blockquote{border-left:5px solid;margin:0;padding-left:10px;} .bgJglY ul{list-style-type:none;margin-left:15px;padding:0px;} .bgJglY ul li{font-size:14px;line-height:24px;margin-bottom:10px;} .bgJglY ul li ul{margin-top:10px;} .bgJglY ul li:before{content:'-';display:inline-block;color:rgb(153,153,153);position:absolute;margin-left:-15px;} .bgJglY img{width:100%;display:block;text-align:center;margin:40px 0px;} .bgJglY code[class*='language-text'],.bgJglY code:not([class*='language-']){color:rgb(189,16,224);font-size:0.9em;white-space:pre-wrap;} .bgJglY code[class*='language-text']:before,.bgJglY code:not([class*='language-']):before{content:'`';} .bgJglY code[class*='language-text']:after,.bgJglY code:not([class*='language-']):after{content:'`';}</style><link as="script" rel="preload" href="/0-a6b522f5d7dcea0104c0.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-8f348615751944ce14e4.js"/><link as="script" rel="preload" href="/app-c678515425848519d7ee.js"/><link as="script" rel="preload" href="/webpack-runtime-3ce535e876d6c5e6360b.js"/><link rel="preload" href="/static/d/211/path---2018-07-22-getting-started-apollo-server-f-40-cc9-WDo9prMCgvDNROfQdjLOWMPRng.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><article class="Container-ig9vs6-0 Header__HeaderWrapper-sc-1wabp0g-0 knehJx"><aside class="Logo__LogoWrapper-sc-1dmboy-0 jCMNrH"><a class="Logo__LogoLink-sc-1dmboy-1 cWPdMk" href="/"><img src="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png" height="28px" width="28px" alt="Logo"/></a></aside><div class="Nav__NavWrapper-h8swmt-0 cLxNOS"><a href="/">HOME</a><a href="/archives">ARCHIVE</a><a href="/about">ABOUT</a><a href="https://github.com/jigsawye" target="_blank" rel="noopener noreferrer">GitHub</a></div></article><aside class="ArticleTitleSection__Wrapper-sc-8eqskn-0 glQwke"><h1 class="ArticleTitleSection__Title-sc-8eqskn-1 hMCDVY">透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server</h1><div class="ArticleTitleSection__Date-sc-8eqskn-2 gYqYBm">2018 年 7 月 22 日（4 個月前）</div></aside><article class="Container-ig9vs6-0 PqukP"><div class="ArticleContent-sc-1ah6ipv-0 bgJglY"><p>在前些日子 GraphQL 界知名的 <a href="https://blog.apollographql.com/announcing-apollo-server-2-2b69fb4702ce">Apollo 發佈了 Apollo Server 2</a>，這個版本其中一個特色就是加強了開發體驗。透過內建 server 減少開發上繁瑣的設定，比起前個版本，寫一個 hello world 的 demo 不再需要花費大量的時間。本文大部分內容都來自於<a href="https://www.apollographql.com/docs/apollo-server/getting-started.html">官方的 Getting Started</a>，經過整理與翻譯過後發布。</p>
+.bgJglY{font-weight:400;font-size:14px;line-height:24px;margin:30px 0 15px;} .bgJglY p{margin-bottom:20px;} .bgJglY a{color:rgb(6,125,247);font-size:inherit;-webkit-text-decoration:none;text-decoration:none;} .bgJglY h1,.bgJglY h2,.bgJglY h3,.bgJglY h4,.bgJglY h5,.bgJglY h6{font-weight:bold;font-size:18px;margin-top:40px;} .bgJglY strong{font-weight:600;} .bgJglY blockquote{border-left:5px solid;margin:0;padding-left:10px;} .bgJglY ul{list-style-type:none;margin-left:15px;padding:0px;} .bgJglY ul li{font-size:14px;line-height:24px;margin-bottom:10px;} .bgJglY ul li ul{margin-top:10px;} .bgJglY ul li:before{content:'-';display:inline-block;color:rgb(153,153,153);position:absolute;margin-left:-15px;} .bgJglY img{width:100%;display:block;text-align:center;margin:40px 0px;} .bgJglY code[class*='language-text'],.bgJglY code:not([class*='language-']){color:rgb(189,16,224);font-size:0.9em;white-space:pre-wrap;} .bgJglY code[class*='language-text']:before,.bgJglY code:not([class*='language-']):before{content:'`';} .bgJglY code[class*='language-text']:after,.bgJglY code:not([class*='language-']):after{content:'`';}</style><link as="script" rel="preload" href="/webpack-runtime-28b14576f600eab2acba.js"/><link as="script" rel="preload" href="/app-4d9f2b5c80db689321c9.js"/><link as="script" rel="preload" href="/commons-6b3a5b1ffd6585b49e3c.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-44847d6cbbae1fbb547a.js"/><link as="fetch" rel="preload" href="/page-data/2018/07/22/getting-started-apollo-server/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><article class="Container-ig9vs6-0 Header__HeaderWrapper-sc-1wabp0g-0 knehJx"><aside class="Logo__LogoWrapper-sc-1dmboy-0 jCMNrH"><a class="Logo__LogoLink-sc-1dmboy-1 cWPdMk" href="/"><img src="/static/favicon-4877df40e4dc6bc5a18d2a720d004e21.png" height="28px" width="28px" alt="Logo"/></a></aside><div class="Nav__NavWrapper-h8swmt-0 cLxNOS"><a href="/">HOME</a><a href="/archives">ARCHIVE</a><a href="/about">ABOUT</a><a href="https://github.com/jigsawye" target="_blank" rel="noopener noreferrer">GitHub</a></div></article><aside class="ArticleTitleSection__Wrapper-sc-8eqskn-0 glQwke"><h1 class="ArticleTitleSection__Title-sc-8eqskn-1 hMCDVY">透過 apollo-server 在 10 分鐘內打造你的第一個 GraphQL server</h1><div class="ArticleTitleSection__Date-sc-8eqskn-2 gYqYBm">2018 年 7 月 22 日（1 年前）</div></aside><article class="Container-ig9vs6-0 PqukP"><div class="ArticleContent-sc-1ah6ipv-0 bgJglY"><p>在前些日子 GraphQL 界知名的 <a href="https://blog.apollographql.com/announcing-apollo-server-2-2b69fb4702ce">Apollo 發佈了 Apollo Server 2</a>，這個版本其中一個特色就是加強了開發體驗。透過內建 server 減少開發上繁瑣的設定，比起前個版本，寫一個 hello world 的 demo 不再需要花費大量的時間。本文大部分內容都來自於<a href="https://www.apollographql.com/docs/apollo-server/getting-started.html">官方的 Getting Started</a>，經過整理與翻譯過後發布。</p>
 <!-- more -->
 <p>閱讀完本文之後，你將會得到以下幾點：</p>
 <ul>
@@ -88,19 +97,19 @@
 <li>使用 GraphQL Playground 發送 query 及查看 response</li>
 </ul>
 <p>為了確保過程無虞，請具備基礎的 JavaScript 的知識及版本 6 以上的 Node.js 後再繼續。</p>
-<h2 id="step-1：初始化-project"><a href="#step-1%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96-project" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1：初始化 project</h2>
+<h2 id="step-1：初始化-project" style="position:relative;"><a href="#step-1%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96-project" aria-label="step 1：初始化 project permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1：初始化 project</h2>
 <p>在此步驟中，我們會透過你的 terminal（e.g. Terminal, iTerm, PowerShell）建立名為 <code class="language-text">graphql-server-example</code> 的資料夾，並建立簡單的 Node.js  程式。本步只是為了後續的操作作準備，將會在  terminal 及 editor 來回作切換</p>
 <p>首先，使用 mkdir 指令建立一個名為 graphql-server-example 的資料夾。</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">mkdir</span> graphql-server-example</code></pre></div>
 <p>進入資料夾。</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">cd</span> graphql-server-example</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> graphql-server-example</code></pre></div>
 <p>使用 Node.js 的 npm 初始化資料夾</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> init --yes</code></pre></div>
 <blockquote>
 <p>我們使用 Node.js 預設的套件管理器 npm。其他套件管理器如 yarn 也有提供類似的功能，不過本篇不會介紹。</p>
 </blockquote>
 <p>上述步驟執行完成後，資料夾內應該會產生 <code class="language-text">package.json</code>，你可以使用 <code class="language-text">ls</code> 來檢視並確認。</p>
-<h2 id="step-2：安裝-dependencies"><a href="#step-2%EF%BC%9A%E5%AE%89%E8%A3%9D-dependencies" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2：安裝 dependencies</h2>
+<h2 id="step-2：安裝-dependencies" style="position:relative;"><a href="#step-2%EF%BC%9A%E5%AE%89%E8%A3%9D-dependencies" aria-label="step 2：安裝 dependencies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2：安裝 dependencies</h2>
 <p>接著，我們要安裝兩個用來建立 GraphQL request 的 response 所需的 dependencies：</p>
 <ul>
 <li><a href="https://npm.im/apollo-server">apollo-server</a>：Apollo server 套件讓你可以定義資料型態及獲取方式。</li>
@@ -113,7 +122,7 @@
 <p>執行以下指令將 dependencies 安裝並儲存在 project 中：</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save apollo-server graphql</code></pre></div>
 <p>在下個步驟我們將會使用這些 dependencies 來建構處理 GraphQL requests 並 response 的 server。</p>
-<h2 id="step-3：建立-server"><a href="#step-3%EF%BC%9A%E5%BB%BA%E7%AB%8B-server" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3：建立 server</h2>
+<h2 id="step-3：建立-server" style="position:relative;"><a href="#step-3%EF%BC%9A%E5%BB%BA%E7%AB%8B-server" aria-label="step 3：建立 server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3：建立 server</h2>
 <p>在此步驟中，我們會提供一個 code block，用於設定 <code class="language-text">apollo-server</code> 來處理 GraphQL requests 並 response。為了加快速度，我們希望你將這 code 複製並貼入你專案的 <code class="language-text">index.js</code> 中。在讀這些 code 時，你可以透過這些有幫助的註解來理解 GraphQL 的核心概念。不用太擔心是否會漏掉一些必要的資訊；我們將在教學的末端提供給你。</p>
 <p>在範例 code 中，會使用兩本書的靜態資料。在更複雜的例子中，可以從 web resource（e.g. Amazon 或 本機端的網站）或資料庫（e.g. MySQL 或 MongoDB）來取得資料。</p>
 <ul>
@@ -127,18 +136,18 @@
 <span class="token comment">// 在更複雜的例子，我們會從像是 REST API 或資料庫等既有的 data soruce 取得資料。</span>
 <span class="token keyword">const</span> books <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
-    title<span class="token punctuation">:</span> <span class="token string">'Harry Potter and the Chamber of Secrets'</span><span class="token punctuation">,</span>
-    author<span class="token punctuation">:</span> <span class="token string">'J.K. Rowling'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'Harry Potter and the Chamber of Secrets'</span><span class="token punctuation">,</span>
+    author<span class="token operator">:</span> <span class="token string">'J.K. Rowling'</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span>
-    title<span class="token punctuation">:</span> <span class="token string">'Jurassic Park'</span><span class="token punctuation">,</span>
-    author<span class="token punctuation">:</span> <span class="token string">'Michael Crichton'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'Jurassic Park'</span><span class="token punctuation">,</span>
+    author<span class="token operator">:</span> <span class="token string">'Michael Crichton'</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Type definitions 定義資料的「形狀」，</span>
 <span class="token comment">// 並指定從 GraphQL server 獲取的方式。</span>
-<span class="token keyword">const</span> typeDefs <span class="token operator">=</span> gql<span class="token template-string"><span class="token string">`
+<span class="token keyword">const</span> typeDefs <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   # GraphQL 的註解使用 hash（#）符號來定義
 
   # 「Book」型別可以使用其他的型別宣告
@@ -152,13 +161,13 @@
   type Query {
     books: [Book]
   }
-`</span></span><span class="token punctuation">;</span>
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// Resolvers 定義從 schema 獲取 type 的方式，</span>
 <span class="token comment">// 我們從上面的「books」array 回傳所有的書。</span>
 <span class="token keyword">const</span> resolvers <span class="token operator">=</span> <span class="token punctuation">{</span>
-  Query<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    books<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> books<span class="token punctuation">,</span>
+  Query<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">books</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> books<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
@@ -168,11 +177,11 @@
 
 <span class="token comment">// `listen` method 啟動 web-server。現有的 apps 可以</span>
 <span class="token comment">// 使用 middleware options，我們將在晚點討論。</span>
-server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`🚀  Server ready at </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> url <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🚀  Server ready at </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>以上 code 包含了所有執行基礎 GraphQL server 的需求。在下一步中，我們會啟動 server，讓它可以 response 所有 request！</p>
-<h2 id="step-4：啟動-server"><a href="#step-4%EF%BC%9A%E5%95%9F%E5%8B%95-server" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4：啟動 server</h2>
+<h2 id="step-4：啟動-server" style="position:relative;"><a href="#step-4%EF%BC%9A%E5%95%9F%E5%8B%95-server" aria-label="step 4：啟動 server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4：啟動 server</h2>
 <p>在此步驟中，我們回到 terminal/console 啟動在剛剛的步驟定義的 server。</p>
 <ul>
 <li>使用 Node.js 執行在剛剛步驟中所建立的 <code class="language-text">index.js</code></li>
@@ -183,16 +192,12 @@ server<span class="token punctuation">.</span><span class="token function">liste
 </ul>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">🚀 Server ready at http://localhost:4000/</code></pre></div>
 <ul>
-<li>
-<p>在你的瀏覽器打開顯示的位址</p>
-</li>
-<li>
-<p>如果所有東西都正常執行，你應該會看到 GraphQL Playground 資源管理工具，我們將在接下來的步驟使用它。</p>
-</li>
+<li>在你的瀏覽器打開顯示的位址</li>
+<li>如果所有東西都正常執行，你應該會看到 GraphQL Playground 資源管理工具，我們將在接下來的步驟使用它。</li>
 </ul>
 <p><img src="https://www.apollographql.com/docs/apollo-server/images/getting-started/graphql-playground.png"></p>
 <p>在下個步驟，我們會使用 GraphQL Playground 工具來送出 query 至 GraphQL server。</p>
-<h2 id="step-5：執行你的第一個-query"><a href="#step-5%EF%BC%9A%E5%9F%B7%E8%A1%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B-query" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5：執行你的第一個 query</h2>
+<h2 id="step-5：執行你的第一個-query" style="position:relative;"><a href="#step-5%EF%BC%9A%E5%9F%B7%E8%A1%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B-query" aria-label="step 5：執行你的第一個 query permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5：執行你的第一個 query</h2>
 <p>現在，你可以使用 GraphQL Playground 開始向 GraphQL server 送出 query，GraphQL Playground 分為幾個部分：</p>
 <ul>
 <li>request（右側）</li>
@@ -208,10 +213,10 @@ server<span class="token punctuation">.</span><span class="token function">liste
 }</code></pre></div>
 <p>當按下中間的播放鈕，會看到右邊的 response 像這樣：</p>
 <p><img src="https://www.apollographql.com/docs/apollo-server/images/getting-started/graphql-playground-response.png"></p>
-<h2 id="next-steps"><a href="#next-steps" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next Steps</h2>
+<h2 id="next-steps" style="position:relative;"><a href="#next-steps" aria-label="next steps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next Steps</h2>
 <p>對於任何 GraphQL server，此 application 應該是一個很好的起點，不過下列資源是構建 GraphQL server 的下一步：</p>
 <ul>
 <li><a href="https://www.apollographql.com/docs/apollo-server/essentials/server.html#integrations">Adding Apollo Server to an existing app.</a></li>
 <li><a href="https://www.apollographql.com/docs/apollo-server/essentials/schema.html">Schema design</a></li>
 <li><a href="https://www.apollographql.com/docs/apollo-server/deployment/heroku.html">Deploy with Heroku</a></li>
-</ul></div></article><article class="Container-ig9vs6-0 PqukP"><div class="Disqus__CommentWrapper-sc-1rk6p9u-0 vEyL"><div id="disqus_thread"></div></div></article><footer class="Footer__FooterWrapper-w8tijy-0 nQyQM"><div class="Copyright__CopyrightWrapper-sc-14thj82-0 eKhoER"><p>Copyright © <!-- -->2018<!-- --> <a href="https://jigsawye.com">Evan Ye</a>, powered by<!-- --> <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby</a>. All rights reserved.</p></div></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-js","jsonName":"2018-07-22-getting-started-apollo-server-f40","path":"/2018/07/22/getting-started-apollo-server/"};window.dataPath="211/path---2018-07-22-getting-started-apollo-server-f-40-cc9-WDo9prMCgvDNROfQdjLOWMPRng";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c678515425848519d7ee.js"],"component---src-templates-post-js":["/component---src-templates-post-js-8f348615751944ce14e4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-50a7ea7dbe557b8aa067.js"],"component---src-pages-about-js":["/component---src-pages-about-js-1119b792a38b3d0a29af.js"],"component---src-pages-archives-js":["/component---src-pages-archives-js-8187d7469b097d431957.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e62248ff4f7d8e258eff.js"]};/*]]>*/</script><script src="/webpack-runtime-3ce535e876d6c5e6360b.js" async=""></script><script src="/app-c678515425848519d7ee.js" async=""></script><script src="/component---src-templates-post-js-8f348615751944ce14e4.js" async=""></script><script src="/0-a6b522f5d7dcea0104c0.js" async=""></script></body></html>
+</ul></div></article><article class="Container-ig9vs6-0 PqukP"><div class="Disqus__CommentWrapper-sc-1rk6p9u-0 vEyL"><div id="disqus_thread"></div></div></article><footer class="Footer__FooterWrapper-w8tijy-0 nQyQM"><div class="Copyright__CopyrightWrapper-sc-14thj82-0 eKhoER"><p>Copyright © <!-- -->2020<!-- --> <a href="https://jigsawye.com">Evan Ye</a>, powered by<!-- --> <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby</a>. All rights reserved.</p></div></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2018/07/22/getting-started-apollo-server/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4d9f2b5c80db689321c9.js"],"component---src-templates-post-js":["/component---src-templates-post-js-44847d6cbbae1fbb547a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-4ee2ede8c5c83a21afd8.js"],"component---src-pages-about-js":["/component---src-pages-about-js-c657d5223ebe8b35985f.js"],"component---src-pages-archives-js":["/component---src-pages-archives-js-77e23627ee71520ab576.js"],"component---src-pages-index-js":["/component---src-pages-index-js-5fb838da1101b783fdde.js"]};/*]]>*/</script><script src="/component---src-templates-post-js-44847d6cbbae1fbb547a.js" async=""></script><script src="/commons-6b3a5b1ffd6585b49e3c.js" async=""></script><script src="/app-4d9f2b5c80db689321c9.js" async=""></script><script src="/webpack-runtime-28b14576f600eab2acba.js" async=""></script></body></html>
