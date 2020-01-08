@@ -23,7 +23,6 @@ const HomePage = ({ data }) => {
       {posts.map(({ node }) => {
         const { fields, frontmatter, html } = node;
         const { title, date } = frontmatter;
-        const __html = html.split('<!-- more -->')[0];
 
         return (
           <ArticleWrapper key={fields.slug}>
@@ -31,7 +30,11 @@ const HomePage = ({ data }) => {
               <DateWrapper>{formatDate(date)}</DateWrapper>
               <TitleLink to={fields.slug}>{title}</TitleLink>
 
-              <ArticleContent dangerouslySetInnerHTML={{ __html }} />
+              <ArticleContent
+                dangerouslySetInnerHTML={{
+                  __html: html.split('<!-- more -->')[0],
+                }}
+              />
 
               <ReadMoreLink to={fields.slug}>READ MORE</ReadMoreLink>
             </Container>

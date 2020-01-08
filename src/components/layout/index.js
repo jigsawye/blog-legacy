@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import GlobalStyle from '../styles/GlobalStyle';
 
@@ -7,13 +7,13 @@ import Head from './Head';
 import Header from './Header';
 
 const Template = ({ children, site }) => (
-  <Fragment>
+  <>
     <GlobalStyle />
     <Head siteMetadata={site.siteMetadata} />
     <Header />
     {children}
     <Footer />
-  </Fragment>
+  </>
 );
 
 export default Template;
